@@ -436,14 +436,8 @@ const Home = () => {
               className="relative flex-1 flex justify-center items-center min-h-[400px]"
             >
               <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
-                {/* Decorative Elements */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-full blur-3xl" />
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-accent/50 rounded-full opacity-20 animate-pulse" />
-                
-                {/* Spark Animation */}
-                <div className="absolute -inset-2">
-                  <CircularSparkPath />
-                </div>
+                {/* Simple gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-accent/10 rounded-full" />
                 
                 {/* Image */}
                 <motion.div
@@ -457,8 +451,8 @@ const Home = () => {
                     className="w-full h-full object-cover object-center"
                   />
                   
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  {/* Subtle overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
                 </motion.div>
 
                 {/* Code-like decorative elements */}
