@@ -14,7 +14,7 @@ import emailjs from '@emailjs/browser';
 import { projects } from '../data/projects';
 
 // Initialize EmailJS with your public key
-emailjs.init("J28JCSFeW3C1rY3YT");
+emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
 // Spark component
 const SparkAnimation = ({ isSmall = false }) => {
@@ -338,10 +338,10 @@ const Home = () => {
     setSubmitStatus({ type: '', message: '' });
 
     emailjs.sendForm(
-      'service_v8zrwn4',
-      'template_pw6xslu',
-      form.current,
-      'J28JCSFeW3C1rY3YT'
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      e.target,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     )
       .then((result) => {
         setSubmitStatus({

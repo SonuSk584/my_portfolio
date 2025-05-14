@@ -1,18 +1,15 @@
 {
   "name": "portfolio-mern",
   "version": "1.0.0",
-  "description": "Full-featured React portfolio web app",
+  "description": "Modern Portfolio Website",
+  "main": "index.js",
   "scripts": {
-    "start": "cd frontend && npm start",
-    "build": "cd frontend && npm run build"
+    "start": "react-scripts start",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=2048 react-scripts build",
+    "install-frontend": "cd frontend && npm install",
+    "dev": "cd frontend && npm start"
   },
-  "keywords": [
-    "portfolio",
-    "react",
-    "frontend"
-  ],
+  "keywords": [],
   "author": "",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "license": "ISC"
 }
