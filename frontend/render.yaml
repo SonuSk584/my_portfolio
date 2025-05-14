@@ -2,9 +2,8 @@ services:
   - type: web
     name: portfolio-frontend
     env: static
-    buildCommand: cd frontend && npm install && npm run build
-    startCommand: cd frontend && npm start
-    staticPublishPath: frontend/build
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
     envVars:
       - key: REACT_APP_EMAILJS_PUBLIC_KEY
         sync: false
