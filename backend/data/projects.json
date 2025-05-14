@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "A modern portfolio website built with MERN stack featuring dark mode, animations, and responsive design.",
+      "imageUrl": "/images/projects/portfolio.png",
+      "technologies": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+      "githubUrl": "https://github.com/yourusername/portfolio",
+      "liveUrl": "https://your-portfolio.com",
+      "featured": true,
+      "category": "web-development"
+    }
+  ]
+} 
