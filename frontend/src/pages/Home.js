@@ -9,6 +9,7 @@ import {
   SiOpenjdk, SiLinux, SiPnpm, SiZod
 } from 'react-icons/si';
 import emailjs from '@emailjs/browser';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 // Import project data
 import { projects } from '../data/projects';
@@ -450,8 +451,8 @@ const Home = () => {
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
-                  <img
-                    src="/avatar.png"
+                  <ImageWithFallback
+                    src="/images/avatar.png"
                     alt="Profile"
                     className="w-full h-full object-cover object-center"
                   />

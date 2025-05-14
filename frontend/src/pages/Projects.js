@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiExternalLink, FiInfo, FiX, FiEye } from 'react-icons/fi';
 import { projects } from '../data/projects';
+import ImageWithFallback from '../components/ImageWithFallback';
 
 // Project Modal Component
 const ProjectModal = ({ project, isOpen, onClose }) => {
@@ -34,7 +35,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
             {/* Project Image */}
             <div className="relative h-[300px] overflow-hidden">
-              <img
+              <ImageWithFallback
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover"
@@ -105,7 +106,7 @@ const ProjectCard = ({ project, index, onViewDetails }) => {
       className="group bg-white/5 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
     >
       <div className="relative overflow-hidden">
-        <motion.img 
+        <ImageWithFallback
           src={project.image}
           alt={project.title}
           className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
