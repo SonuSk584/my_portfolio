@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: portfolio-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/build
+    envVars:
+      - key: REACT_APP_EMAILJS_PUBLIC_KEY
+        sync: false
+      - key: REACT_APP_EMAILJS_SERVICE_ID
+        sync: false
+      - key: REACT_APP_EMAILJS_TEMPLATE_ID
+        sync: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html 
