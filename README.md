@@ -1,158 +1,116 @@
-# Portfolio MERN Stack Web App
+# Modern Portfolio Website
 
-A full-featured portfolio web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). This application showcases web development and data science projects with admin capabilities for content management.
+A modern, responsive portfolio website built with React.js and styled with Tailwind CSS. This single-page application showcases my projects, skills, and provides a contact form powered by EmailJS.
 
 ## Features
 
-- 🎨 Modern UI with Tailwind CSS and DaisyUI
-- 🔐 Firebase Authentication for admin access
-- 📱 Fully responsive design
-- ✨ Smooth animations with Framer Motion
-- 📂 Project portfolio with categories
-- 📝 Admin dashboard for content management
-- 📄 Resume download functionality
-- 📬 Contact form
-- 🔒 Secure API endpoints
+- 🎨 Modern and clean UI design
+- 🌓 Beautiful animations with Framer Motion
+- 📱 Fully responsive layout
+- 💼 Project showcase with detailed modal views
+- 📬 Contact form integration with EmailJS
+- ⚡ Fast performance and optimized build
+- 🎯 SEO friendly
+- 🚀 Easy deployment on Render
 
 ## Tech Stack
 
-### Frontend
 - React.js
 - Tailwind CSS
-- DaisyUI
 - Framer Motion
-- Firebase Authentication
+- EmailJS
+- React Icons
 - React Router DOM
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Firebase Admin SDK
-- Mongoose
-- JWT Authentication
+## Live Demo
+
+Visit the live website: [Your Portfolio](https://portfolio-frontend-xxxx.onrender.com)
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 * Node.js (v14.0.0 or higher)
-* MongoDB (v4.0.0 or higher)
-* Firebase account with a project set up
-* Git
+* npm or yarn package manager
+* EmailJS account for contact form functionality
 
 ## Setup Instructions
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd portfolio-mern
+   git clone https://github.com/SonuSk584/my_portfolio.git
+   cd my_portfolio
    ```
 
-2. Install dependencies for both backend and frontend:
+2. Install dependencies:
    ```bash
-   # Install backend dependencies
-   npm install
-
-   # Install frontend dependencies
    cd frontend
    npm install
    ```
 
 3. Create environment variables:
-
-   Create a `.env` file in the root directory with the following variables:
-   ```
-   # Server Configuration
-   PORT=5000
-   NODE_ENV=development
-
-   # MongoDB Configuration
-   MONGODB_URI=mongodb://localhost:27017/portfolio
-
-   # Firebase Admin Configuration
-   FIREBASE_PROJECT_ID=your-project-id
-   GOOGLE_APPLICATION_CREDENTIALS=path/to/service-account.json
-   ```
-
    Create a `.env` file in the frontend directory with the following variables:
    ```
-   # Firebase Configuration
-   REACT_APP_FIREBASE_API_KEY=your-api-key
-   REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
-   REACT_APP_FIREBASE_PROJECT_ID=your-project-id
-   REACT_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
-   REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-   REACT_APP_FIREBASE_APP_ID=your-app-id
-
-   # API Configuration
-   REACT_APP_API_URL=http://localhost:5000/api
+   REACT_APP_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+   REACT_APP_EMAILJS_SERVICE_ID=your_emailjs_service_id
+   REACT_APP_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
    ```
 
-4. Set up Firebase:
-   - Create a new project in Firebase Console
-   - Enable Authentication with Google provider
-   - Generate a service account key and save it securely
-   - Update the environment variables with your Firebase configuration
-
-5. Run the development server:
+4. Run the development server:
    ```bash
-   # In the root directory
-   npm run dev
+   npm start
    ```
-
-   This will start both the backend server and the frontend development server.
 
 ## Project Structure
 
 ```
-portfolio-mern/
-├── frontend/           # React frontend
-│   ├── public/
-│   └── src/
-│       ├── components/
-│       ├── pages/
-│       ├── context/
-│       └── utils/
-├── backend/           # Node.js backend
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   └── routes/
-└── uploads/          # Project files storage
+frontend/
+├── public/           # Static files
+└── src/
+    ├── components/   # Reusable components
+    ├── pages/       # Page components
+    ├── data/        # Project data and constants
+    └── assets/      # Images and other assets
 ```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-- `npm run dev`: Runs both frontend and backend in development mode
-- `npm run server`: Runs only the backend server
-- `npm run client`: Runs only the frontend server
-- `npm run build`: Builds the frontend for production
+- `npm start`: Runs the app in development mode
+- `npm test`: Launches the test runner
+- `npm run build`: Builds the app for production
+- `npm run eject`: Ejects from create-react-app
 
-## Deployment
+## Deployment on Render
 
-1. Build the frontend:
-   ```bash
-   cd frontend
-   npm run build
-   ```
+1. Push your code to GitHub
+2. Create a new Static Site on Render
+3. Connect your GitHub repository
+4. Configure the build settings:
+   - Build Command: `cd frontend && npm install && npm run build`
+   - Publish Directory: `frontend/build`
+5. Add environment variables in Render dashboard
+6. Deploy!
 
-2. Set the environment variables in your production environment
+## Features in Detail
 
-3. Start the server:
-   ```bash
-   npm start
-   ```
+### Animated UI Components
+- Smooth page transitions
+- Interactive project cards
+- Animated skill badges
+- Typewriter effect for hero section
 
-## Security
+### Project Showcase
+- Detailed project modals
+- Live demo links
+- GitHub repository links
+- Technology tags
 
-- All admin routes are protected with Firebase Authentication
-- API endpoints for project management require valid Firebase ID tokens
-- Environment variables are used for sensitive information
-- CORS is configured for security
-- Input validation and sanitization are implemented
+### Contact Form
+- EmailJS integration
+- Form validation
+- Success/Error notifications
+- Social media links
 
 ## Contributing
 
