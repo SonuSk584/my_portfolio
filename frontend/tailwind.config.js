@@ -12,9 +12,9 @@ module.exports = {
           dark: '#4f46e5',
         },
         secondary: {
-          DEFAULT: '#1e1e1e',
-          light: '#2d2d2d',
-          dark: '#141414',
+          DEFAULT: '#090909',
+          light: '#1e1e1e',
+          dark: '#000000',
         },
         accent: {
           DEFAULT: '#f97316',
@@ -36,9 +36,9 @@ module.exports = {
     themes: [
       {
         portfolio: {
-          "primary": "#1e3a8a",
-          "secondary": "#0f172a",
-          "accent": "#2563eb",
+          "primary": "#6366f1",
+          "secondary": "#090909",
+          "accent": "#f97316",
           "neutral": "#1f2937",
           "base-100": "#ffffff",
           "info": "#3abff8",

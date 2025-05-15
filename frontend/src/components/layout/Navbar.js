@@ -89,9 +89,8 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className="bg-[#141414] text-white fixed w-full top-0 z-50 backdrop-blur-sm opacity-80">
-      {/* Matching the home section's gradient */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-accent/5 opacity-80"></div>
+    <nav className="fixed w-full top-0 z-50 backdrop-blur-xl bg-secondary/80">
+      <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-black to-accent/10"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -105,7 +104,7 @@ const Navbar = () => {
                 onClick={() => scrollToSection(link.id)}
                 className={`relative ${
                   activeSection === link.id
-                    ? 'text-white'
+                    ? 'text-primary font-medium'
                     : 'text-gray-300 hover:text-white'
                 }`}
                 whileHover={{ y: -2 }}
@@ -115,7 +114,7 @@ const Navbar = () => {
                 {activeSection === link.id && (
                   <motion.div
                     layoutId="navIndicator"
-                    className="absolute left-0 right-0 h-0.5 bg-blue-500 bottom-[-4px]"
+                    className="absolute left-0 right-0 h-0.5 bg-primary bottom-[-4px]"
                     transition={{ duration: 0.2 }}
                   />
                 )}
@@ -125,7 +124,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-2xl"
+            className="md:hidden text-2xl text-gray-300 hover:text-white transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <FiX /> : <FiMenu />}

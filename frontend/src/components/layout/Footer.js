@@ -24,12 +24,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#090909] text-gray-100 border-t border-white/10">
-      <div className="container mx-auto px-4">
+    <footer className="bg-secondary/80 backdrop-blur-xl border-t border-white/10 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5"></div>
+      <div className="container mx-auto px-4 relative z-10">
         {/* Main Footer Content */}
         <div className="py-6 flex flex-col md:flex-row items-center">
           <div className="mb-4 md:mb-0 md:w-1/3 self-center">
-            <Link to="/" className="text-xl font-bold mb-2 inline-block text-white">
+            <Link to="/" className="text-xl font-bold mb-2 inline-block text-white hover:text-primary transition-colors">
               It's Sonu here
             </Link>
             <p className="text-gray-300 text-sm max-w-md mt-2">

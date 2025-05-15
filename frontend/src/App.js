@@ -22,20 +22,23 @@ const Loading = () => (
 
 function App() {
   return (
-    <div className="app bg-secondary-dark min-h-screen flex flex-col">
+    <div className="app bg-secondary min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-grow">
-        <AnimatePresence mode="wait">
-          <Suspense fallback={<Loading />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </AnimatePresence>
+      <main className="flex-grow relative">
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-black to-accent/5"></div>
+        <div className="relative z-10">
+          <AnimatePresence mode="wait">
+            <Suspense fallback={<Loading />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </AnimatePresence>
+        </div>
       </main>
       <Footer />
     </div>
